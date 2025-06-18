@@ -1,42 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GuhanShiva Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guhan S - Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    .nav-links a {
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      background-color: transparent;
+      transition: all 0.3s ease-in-out;
+    }
 
-    <script src="script.js"></script>
+    .nav-links a:hover {
+      background-color: #00bcd4;
+      color: #000 !important;
+      box-shadow: 0 0 15px #00bcd4;
+    }
+
+    .hero {
+      animation: fadeInHero 1.5s ease-in-out both;
+    }
+
+    @keyframes fadeInHero {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .toggle-theme {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background-color: #00bcd4;
+      color: #000;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 2000;
+      box-shadow: 0 0 10px #00bcd4;
+    }
+
+    .light-mode {
+      background-color: #ffffff;
+      color: #111111;
+    }
+
+    .light-mode .section {
+      background-color: #f0f0f0;
+      color: #111111;
+    }
+
+    .light-mode .navbar,
+    .light-mode .footer {
+      background-color: #e0e0e0;
+      color: #111111;
+    }
+
+    .light-mode a {
+      color: #0077b6;
+    }
+
+    .hero img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 10px #00bcd4;
+    }
+  </style>
 </head>
 <body>
-    <nav class="nav-bar">
-        <h2>Portfolio</h2>
-        <div class="nav-links">
-            <a href="">Home</a>
-            <a href="">Skills</a>
-            <a href="">Projects</a>
-            <a href="">Contact</a>
-        </div>
-    </nav>
-    <div class="hero-section">
-        <center>
-        <h1 style="font-size: 60px;">Hello There,Im Guhansiva!</h1>
-        <h4>I'm a Mechatronics Engineer with a passion for both automation and web development. I enjoy bridging hardware and software—designing systems that are smart, responsive, and user-friendly. Always curious, always building.</h4>
-        <button class="btn1">Contact Me</button>
-        <button class="btn2">Download CV</button>
-       </center>
+
+  <button class="toggle-theme" onclick="document.body.classList.toggle('light-mode')">🌓 Theme</button>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="logo">Portfolio</h1>
+      <ul class="nav-links">
+        <li><a href="paper presntation.html">Paper Presentation</a></li>
+        <li><a href="projects.html">Projects Presented</a></li>
+        <li><a href="implant-training.html">Implant Trainings</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="Black and White Clean Professional A4 Resume.pdf" target="_blank">📄 Resume</a></li>
+      </ul>
     </div>
-    <div class="skill-section">
-        <h1 style="text-align: center;">My Skills</h1>
-        <div class="skill-container">
-            
-            <h2>Web-Development</h2>
-            <p>I craft responsive, user-friendly websites using modern web technologies.
-Passionate about clean design, performance, and seamless user experiences
-</p>
-        </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content" style="display: flex; flex-direction: column; align-items: center;">
+      <img src="Guhans.jpg" alt="Guhan S">
+      <h2>Hello there, I'm guhan_Siva</h2>
+      <p>Mechatronics Engineer | Robotics Enthusiast | 3D Designer</p>
     </div>
-    
+  </header>
+
+  <!-- Objective -->
+  <section id="objective" class="section">
+    <h2>Career Objective</h2>
+    <p>To work with maximum potential using my skills while contributing innovative thoughts and actions to develop the company and my knowledge.</p>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>BE Mechatronics Engineering</strong> - Kongu Engineering College (2023 - 2027) – CGPA: 8.1</li>
+      <li>Navarasam Matriculation Higher Secondary School, Palliyuthu</li>
+    </ul>
+  </section>
+
+  <!-- Paper Presentations -->
+  <section class="section">
+    <h2>Paper Presentations</h2>
+    <ul>
+      <li>Hydrogel – Scientium, KEC</li>
+      <li>Non-electrical Solar Tracker – Throb, Mechnotron, Ideas to Impact</li>
+      <li>Automatic Ceiling Fan Cleaner – Ideathon</li>
+    </ul>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div><strong>Applications:</strong> CorelDRAW, Scratch, Blender, Canva</div>
+      <div><strong>Mechanical Design:</strong> SolidWorks, AutoCAD</div>
+      <div><strong>Languages:</strong> English, Tamil</div>
+      <div><strong>Specialization:</strong> 3D Design, Manufacturing</div>
+    </div>
+  </section>
+
+  <!-- Workshops -->
+  <section class="section">
+    <h2>Workshops</h2>
+    <ul>
+      <li>TRS Autonomous Vehicle – 2025</li>
+      <li>Robo Sumo – 2024</li>
+      <li>ElectroCAD IoT – 2025</li>
+      <li>Intro to Robotics in Automation Studio 9.0 – 2024</li>
+    </ul>
+  </section>
+
+  <!-- Credit Courses -->
+  <section class="section">
+    <h2>Credit Courses</h2>
+    <ul>
+      <li>PCB Design – 2024</li>
+      <li>Relay Logic Controller – 2025</li>
+    </ul>
+  </section>
+
+  <!-- Field Visits -->
+  <section class="section">
+    <h2>Field Visits</h2>
+    <ul>
+      <li>Kodai Chocolate Factory, Kodaikanal</li>
+      <li>Real Tech Systems, Perundurai</li>
+      <li>Coral Coil, Injampalli</li>
+    </ul>
+  </section>
+
+  <!-- Memberships -->
+  <section class="section">
+    <h2>Memberships</h2>
+    <ul>
+      <li>Science Club</li>
+      <li>Executive Member, Robotics Club (RBC)</li>
+      <li>Member, Robotics Society (TRS)</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:guhansivasubramanian006@gmail.com">guhansivasubramanian006@gmail.com</a></p>
+    <p>Phone: +91 88076 51897</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/guhan-siva-9b7b712b6" target="_blank">Guhan Siva</a></p>
+    <p>LeetCode: <a href="https://leetcode.com/u/Guhan_Siva/" target="_blank">Guhan_Siva</a></p>
+    <p>Location: Erode, Tamil Nadu, India</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>A passionate Mechatronics Engineering student at Kongu Engineering College with a strong interest in robotics, automation, and 3D design.</p>
+    <p>From prototyping smart devices to competing in national hackathons, I thrive in hands-on environments and collaborative teams. I'm driven by curiosity, always exploring how things work — and how they can work better.</p>
+    <p>My goal is to grow as an engineer who not only solves problems, but also creates meaningful, efficient, and sustainable technology for the future.</p>
+  </footer>
+
 </body>
 </html>
